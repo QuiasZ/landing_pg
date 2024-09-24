@@ -1,31 +1,27 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-
-// Caminhos de origem
-const paths = {
-    styles: {
-        src: 'src/styles/**/*.scss',
-        dest: 'dist/styles/'
-    },
-    scripts: {
-        src: 'src/js/**/*.js',
-        dest: 'dist/js/'
-    },
-    images: {
-        src: 'src/images/**/*',
-        dest: 'dist/images/'
-    }
-};
-
-// Tarefa para compilar SASS
-function styles() {
-    return gulp.src(paths.styles.src)
-        .pipe(sass())
-        .pipe(gulp.dest(paths.styles.dest));
+{
+  "name": "landing_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.71.1"
+  },
+  "dependencies": {
+    "less": "^4.2.0"
+  }
 }
-
 // Tarefa para minificar JS
 function scripts() {
     return gulp.src(paths.scripts.src)
