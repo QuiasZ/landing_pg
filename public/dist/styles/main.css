@@ -1,0 +1,316 @@
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9333333333);
+  z-index: 1;
+}
+.header__container {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 110.63px;
+  height: 30px;
+}
+.header__links {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+.header__links__item {
+  padding: 10px 1px;
+}
+.header__links__item a {
+  text-decoration: none;
+}
+
+.button-log {
+  border: 2px solid transparent;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+.button-log:hover {
+  background-color: rgb(38.832972973, 43.54, 48.247027027);
+}
+
+.button-header {
+  background-color: rgb(0, 43, 231);
+  color: rgb(255, 255, 255);
+  border: 2px solid transparent;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+.button-header:hover {
+  background-color: rgb(0, 38.7, 207.9);
+}
+
+.hero {
+  min-height: 80vh;
+  position: relative;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%), url(../images/logos/supoernatural-logo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero__content {
+  width: 610px;
+  padding: 19rem 0 0 13rem;
+}
+.hero__content__rate {
+  display: flex;
+}
+.hero__content__rate h6 {
+  margin-right: 0.5rem;
+}
+.hero__content p {
+  margin: 16px 0;
+}
+.hero__content__button {
+  margin-top: 34px;
+}
+.hero__content__button a {
+  text-decoration: none;
+}
+.hero__content__logo__show {
+  max-width: 322px;
+}
+.hero__logo {
+  max-width: 322px;
+  margin-bottom: 18px;
+}
+.hero .button-hero {
+  background-color: rgb(0, 43, 231);
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 13px 24px;
+}
+.hero .button-hero:hover {
+  background-color: rgb(0, 38.7, 207.9);
+}
+
+.episodes {
+  padding: 9vw 10vw;
+}
+.episodes__list {
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 16px;
+}
+.episodes__list__item img {
+  height: 150px;
+}
+.episodes__list__item h6 {
+  margin: 16px 0px 8px;
+}
+.episodes__list__item p {
+  margin: 0px 0px 16px;
+}
+.episodes__container .is--hiden {
+  display: none;
+}
+.episodes__container h6 {
+  margin: 24px 0px 16px;
+}
+.episodes .season-selector {
+  position: relative;
+  display: inline-block;
+}
+.episodes .season-selector li {
+  font-weight: bold;
+}
+.episodes .selected-option {
+  display: block;
+  padding: 10px 24px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.episodes .selected-option svg {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.episodes .selected-option:hover {
+  background-color: rgb(39.822972973, 44.65, 49.477027027);
+}
+.episodes .options-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  list-style-type: none;
+  background-color: rgba(64, 68, 89, 0.7);
+  border-radius: 0 0 10px 10px;
+}
+.episodes .options-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.episodes .options-list li:hover {
+  background-color: rgba(64, 68, 89, 0.7);
+}
+
+.show__info {
+  padding: 3vw 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.show__info .generos {
+  width: 100%;
+  flex: 1;
+  margin-right: 20px;
+}
+.show__info .generos h3 {
+  margin-bottom: 15px;
+}
+
+.show__name {
+  padding: 5px 10vw;
+}
+
+.banner {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: 25px;
+  margin-left: auto;
+  margin-top: 48px;
+  background: linear-gradient(320deg, rgba(0, 51, 255, 0.8) 0%, rgb(0, 0, 102) 50%);
+  box-sizing: border-box;
+}
+.banner h2 {
+  margin: 24px 18vw 30px;
+}
+.banner span {
+  margin-left: 40vw;
+}
+.banner .btn-banner {
+  background-color: rgb(0, 43, 231);
+  color: rgb(255, 255, 255);
+  border: 2px solid transparent;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 8px;
+  padding: 13px 24px;
+  cursor: pointer;
+}
+.banner .btn-banner:hover {
+  background-color: rgb(0, 33.5064935065, 180);
+}
+
+.footer {
+  padding: 6vw 15vw;
+}
+.footer__container a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer__container li {
+  list-style-type: none;
+}
+.footer__link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 18px 24px;
+}
+.footer .btn-footer {
+  border: 2px solid transparent;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+.footer .btn-footer:hover {
+  background-color: rgb(39.822972973, 44.65, 49.477027027);
+}
+.footer p {
+  margin-top: 12px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background-color: #060212;
+}
+
+.text {
+  font-size: 16px;
+  color: #fff;
+}
+
+.title {
+  font-size: 35px;
+  color: #fff;
+  color: #fff;
+}
+
+.title--small {
+  font-size: 14px;
+  color: #fff;
+  color: #fff;
+}
+
+.title--big {
+  font-size: 18px;
+  color: #fff;
+  color: #fff;
+}
+
+.title--biggest {
+  font-size: 24px;
+  color: #fff;
+  color: #fff;
+}
+
+.text--small {
+  font-size: 14px;
+  color: #fff;
+}
+
+.text--big {
+  font-size: 17px;
+  color: #fff;
+}
+
+.text--espisodes {
+  font-size: 11.7px;
+  color: #fff;
+}
+
+.text--footer {
+  font-size: 10px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

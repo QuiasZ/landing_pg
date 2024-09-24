@@ -1,4 +1,4 @@
 # Ignorar diretórios de build e dependências
-node_modules
-dist
-public/  # Certifique-se de que esta linha esteja removida ou comentada
+#node_modules
+#dist
+#public/  # Certifique-se de que esta linha esteja removida ou comentada
