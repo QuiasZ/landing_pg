@@ -1,3 +1,4 @@
+# Ignorar diretórios de build e dependências
 node_modules
 dist
-public/  # Remova o '#' para que a pasta não seja ignorada
+public/  # Certifique-se de que esta linha esteja removida ou comentada
