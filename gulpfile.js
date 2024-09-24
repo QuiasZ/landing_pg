@@ -1,30 +1,45 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
 
-function scripts() {
-    return gulp.src('./src/scripts/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
-}
+// Caminhos de origem
+const paths = {
+    styles: {
+        src: 'src/styles/**/*.scss',
+        dest: 'dist/styles/'
+    },
+    scripts: {
+        src: 'src/js/**/*.js',
+        dest: 'dist/js/'
+    },
+    images: {
+        src: 'src/images/**/*',
+        dest: 'dist/images/'
+    }
+};
 
+// Tarefa para compilar SASS
 function styles() {
-    return gulp.src('./src/styles/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(gulp.dest('./dist/css'));
+    return gulp.src(paths.styles.src)
+        .pipe(sass())
+        .pipe(gulp.dest(paths.styles.dest));
 }
 
+// Tarefa para minificar JS
+function scripts() {
+    return gulp.src(paths.scripts.src)
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
+// Tarefa para otimizar imagens
 function images() {
-    return gulp.src('./src/images/**/*')
+    return gulp.src(paths.images.src)
         .pipe(imagemin())
-        .pipe(gulp.dest("./dist/images"))
+        .pipe(gulp.dest(paths.images.dest));
 }
 
-
-
-exports.default = gulp.parallel(styles, images, scripts);
-exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
-    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts))
-}
+// Tarefa padrão
+const build = gulp.series(gulp.parallel(styles, scripts, images));
+exports.default = build;
