@@ -22,20 +22,3 @@
     "less": "^4.2.0"
   }
 }
-// Tarefa para minificar JS
-function scripts() {
-    return gulp.src(paths.scripts.src)
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.scripts.dest));
-}
-
-// Tarefa para otimizar imagens
-function images() {
-    return gulp.src(paths.images.src)
-        .pipe(imagemin())
-        .pipe(gulp.dest(paths.images.dest));
-}
-
-// Tarefa padrão
-const build = gulp.series(gulp.parallel(styles, scripts, images));
-exports.default = build;
